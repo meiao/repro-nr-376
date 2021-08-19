@@ -21,6 +21,13 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+bootRun {
+  jvmArgs =
+    [
+      "-javaagent:/path/to/newrelic.jar"
+    ]
+}
+
 test {
 	useJUnitPlatform()
 }
